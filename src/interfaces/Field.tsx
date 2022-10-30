@@ -1,8 +1,8 @@
-interface Field {
+interface newt {
   id: number,
   character: string,
   color: string,
   on: boolean
 }
 
-export default Field;
+export default newt;

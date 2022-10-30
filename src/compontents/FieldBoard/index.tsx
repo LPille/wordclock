@@ -1,22 +1,18 @@
 import React, {} from "react";
-import Field from "../../interfaces/Field";
 import { FieldItem } from "./FieldItem";
 import styles from './styles.module.scss';
-import {Container, Grid} from "@mui/material";
+import { Grid } from "@mui/material";
+import { dahsboardType } from "myTypes";
 
-interface FieldProps {
-    fields: Field[];
-}
 
-export const FieldBoard: React.FC<FieldProps> = ({fields}: FieldProps) => {
+export const FieldBoard: React.FC<dahsboardType> = (props: dahsboardType) => {
    
-
     return (
         <section>
             <div className={styles.dahsboard}>
                 <Grid container rowSpacing={2} columnSpacing={1} columns={11} > 
-                    {fields.map(item =>(
-                        <FieldItem key={item.id} field={item}/>
+                    {props.fields.map(field =>(
+                        <FieldItem key={field.id} field={field}/>
                         ))}
                 </Grid>
             </div>

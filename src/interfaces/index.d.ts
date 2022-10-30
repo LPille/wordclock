@@ -5,13 +5,25 @@ declare module 'myTypes' {
         color: string,
         on: boolean
     };
-  
-    interface FieldProps {
-      field: FieldType,
+
+    type dahsboardType = {
+        fields: FieldType[],
+        brightness?: number,
+    };
+
+    interface dashboardProps {
+        dashboard: dahsboardType
     }
+         // brightness: number,
+
+    interface FieldProps {
+        field: FieldType  
+     }
   }
   
   module.exports = {
     FieldType,
     FieldProps,
+    dahsboardType,
+    dashboardProps
   };

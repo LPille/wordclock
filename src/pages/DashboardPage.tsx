@@ -1,6 +1,6 @@
 import { Container } from '@mui/material';
 import { FieldType } from 'myTypes';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FieldBoard } from '../compontents/FieldBoard';
 import styles from './styles.module.scss';
 
