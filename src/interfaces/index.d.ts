@@ -3,20 +3,18 @@ declare module 'myTypes' {
         id: number,
         character: string,
         color: string,
-        on: boolean
+        isOn: boolean,
     };
 
     type dahsboardType = {
         fields: FieldType[],
-        brightness?: number,
+        brightness: number,
+        sameColor: boolean,
+        isOn: isOn
     };
 
-    interface dashboardProps {
-        dashboard: dahsboardType
-    }
-         // brightness: number,
-
     interface FieldProps {
+        isOn: boolean,
         field: FieldType  
      }
   }
